@@ -6,8 +6,8 @@ function moveDodgerRight(){
   var rightNumber = dodger.style.left.replace('px', '')
   var right = parseInt(rightNumber)
 
-  if (right > 0) {
-    dodger.style.right = `${right - 1}px`
+  if (right <360 ) {
+    dodger.style.left = `${right - 1}px`
   }
 }
 
