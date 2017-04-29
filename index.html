@@ -10,7 +10,21 @@
       <div id="dodger" style="bottom: 0px; left: 180px;"></div>
     </div>
     <script>
-      // your code here
+    var dodger = document.getElementById('dodger')
+
+    function moveDodgerRight(){
+      var rightNumber = dodger.style.left.replace('px', '')
+      var right = parseInt(rightNumber)
+      if (right <360) {
+        dodger.style.left = `${right + 1}px`
+      }
+    }
+
+    document.addEventListener('keydown', function(e){
+      if (e.which === 39) {
+        moveDodgerRight()
+      }
+    })
     </script>
   </body>
 </html>
